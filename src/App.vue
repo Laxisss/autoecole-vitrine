@@ -23,14 +23,15 @@ body {
 
 .nav-header {
   position: absolute;
-  top: 0;
+  width: 100%;
+  top: 5px;
 }
 
 nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 nav a {
