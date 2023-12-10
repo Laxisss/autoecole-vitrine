@@ -1,12 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <header class="nav-header">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+  </header>
   <router-view/>
 </template>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +21,15 @@
   color: #2c3e50;
 }
 
+.nav-header {
+  position: absolute;
+  top: 0;
+}
+
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   padding: 30px;
 }
 
