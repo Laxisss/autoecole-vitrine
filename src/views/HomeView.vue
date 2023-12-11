@@ -3,7 +3,7 @@
     <section class="main-section parallax">
       <!-- <div class="background"></div> -->
       <!-- <img src="../assets/tep devanture-car.png" class="background"/> -->
-      <h1 class="title">Tout Est Permis</h1>
+      <h1 class="main-title">Tout Est Permis</h1>
       <p>Permis Voiture, Moto, Remorque...</p>
     </section>
     <section class="category">
@@ -127,10 +127,83 @@
         </article>
       </div>
     </section>
-    <section>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi eligendi architecto facere odit nemo, magni dicta ipsa officiis maxime nostrum, asperiores doloremque officia quia commodi quidem porro assumenda ea aspernatur in, molestiae aut possimus! Explicabo doloremque delectus quam dolore sit dolorum eligendi totam non atque consequatur corrupti, beatae similique culpa voluptates impedit consectetur blanditiis reiciendis, iste cumque architecto maiores officiis dolorem? Accusantium animi at, quas consequuntur corporis blanditiis aspernatur. Sapiente voluptatem nihil eveniet omnis dolorum dolore! Quibusdam veniam aliquid vero saepe dicta minima iste? Quibusdam ipsam quis quod officia aliquid in ducimus! Iure exercitationem corporis facilis fugit nobis nisi incidunt! Doloribus deserunt quam veritatis fugit sed a assumenda dolores blanditiis iure nostrum cum soluta corporis autem consequuntur, eaque impedit beatae nesciunt. Aliquam consequatur similique tempore quisquam quas nobis dignissimos cum aut dolores impedit a assumenda officia, nihil quibusdam magnam ullam hic sit architecto voluptates animi voluptatibus distinctio! Unde quos, minima explicabo distinctio, quas modi at corrupti, esse ab assumenda incidunt quod sequi tempora accusamus rerum voluptatibus deleniti officia. Ullam quis eius et minus vero itaque deleniti pariatur recusandae veritatis veniam. Ipsa corrupti adipisci laboriosam ad nesciunt explicabo libero ullam a, rem sed ipsam autem nam nulla facilis veniam nobis dolorum repellat. Obcaecati sed tempore omnis dolores voluptas earum maiores iure expedita provident dicta non reiciendis, nemo modi aspernatur recusandae possimus fuga dolorem! A rem dolor provident, laborum aliquam beatae ipsum, quod dolorum eum eos dolorem illo vero quas! Quidem, impedit tempore! Eos corrupti pariatur recusandae voluptatum. Laborum cumque quia provident dignissimos eos temporibus consequuntur sint architecto quas iure optio error, fugiat atque ullam deserunt corrupti at odit officia illum quidem obcaecati quis! Non, saepe nostrum quis atque iusto rerum sit asperiores distinctio sunt temporibus quaerat optio labore illo aut? Nemo eum earum iste et! Ipsam molestias possimus maiores dolorem ullam.
-      </p>
+    <section class="category">
+      <h1 class="title">Nos disponibilités</h1>
+    </section>
+    <section class="hours-section parallax">
+      <div class="row">
+        <div class="col">
+          <h1 class="title-sm">Horaires du bureau</h1>
+          <div class="hour-list">
+            <div class="hour-display">
+              <span>Lundi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mardi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mercredi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mardi</span><span>Fermé</span>
+            </div>
+            <div>
+              <span>Vendredi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Samedi</span><span>09:30-14:30</span>
+            </div>
+            <div>
+              <span>Dimanche</span><span>Fermé</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h1 class="title-sm">Horaires de conduite</h1>
+          <div class="hour-list">
+            <div class="hour-display">
+              <span>Lundi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mardi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mercredi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Mardi</span><span>Fermé</span>
+            </div>
+            <div>
+              <span>Vendredi</span><span>09:30-13:00 | 14:30-19:00</span>
+            </div>
+            <div>
+              <span>Samedi</span><span>09:30-19:00</span>
+            </div>
+            <div>
+              <span>Dimanche</span><span>Fermé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h1 class="title">Nous retrouver</h1>
+    </section>
+    <section class="location-section parallax">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181.47118173447035!2d5.399979087845465!3d43.30297692570305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bf66a4d12e25%3A0x68515aec28ef4bb9!2sBd%20de%20la%20Blancarde%2C%2013004%20Marseille!5e0!3m2!1sfr!2sfr!4v1702321020452!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="category legal-tenders">
+      <div class="row">
+        <div class="col">
+          <p>Batch 1</p>
+        </div>
+        <div class="col">
+          <p>Batch 2</p>
+        </div>
+        <div class="col">
+          <p>Batch 3</p>
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -227,12 +300,28 @@ export default {
     padding: 32px;
     height: fit-content;
   }
+  .hours-section {
+    background: url('../assets/timing.png');
+    padding: 32px;
+    height: fit-content;
+  }
+  .location-section {
+    background: url('../assets/cartoonMap2.png');
+    padding: 32px;
+    height: fit-content;
+  }
+
+  .location-section iframe {
+    width: 100%;
+    min-height: 30vh;
+    box-shadow: 0 0 15px black;
+  }
   .category {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: dimgray;
-    height: 10vh;
+    min-height: 10vh;
     padding: 32px;
   }
   .category .title {
@@ -248,13 +337,31 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .title {
+  .main-title {
     width: 100%;
     margin-bottom: 0;
     color: white;
     text-shadow: 0 0 5px black;
     font-size: 8vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .title {
+    width: 100%;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .title-sm {
+    width: 100%;
+    color: white;
+    text-shadow: 0 0 50px black;
+    font-size: 4vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .col p {
+    font-size: 2vw;
   }
   img {
     width: 100%;
@@ -321,7 +428,6 @@ export default {
   }
   .card footer {
     width: 100%;
-    min-height: 5vh;
     color: white;
     text-shadow: 0 0 5px black;
     font-size: 1.5vw;
@@ -372,7 +478,47 @@ export default {
     opacity: 0;
   }
 
+  .row {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 20px black;
+    margin-bottom: 0.83em;
+    width: 100%;
+  }
+  .col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .hour-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+  }
+  .hour-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+
   @media only screen and (max-device-width: 1366px) {
+    .hour-list {
+      width: 90%;
+      font-size: 2vw;
+    }
     .card {
       /* flex-basis: 90vw!important; */
       flex: 0 0 90vw!important;
@@ -410,8 +556,11 @@ export default {
       height: fit-content;
       overflow-x: auto;
     }
+    .main-title {
+      font-size: 6vh;
+    }
     .title {
-      font-size: 8vh;
+      font-size: 3vh;
     }
     .card header {
       width: 100%;

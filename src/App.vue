@@ -1,10 +1,10 @@
 <template>
-  <header class="nav-header">
+  <!-- <header class="nav-header">
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
-  </header>
+  </header> -->
   <router-view/>
 </template>
 
