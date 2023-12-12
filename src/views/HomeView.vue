@@ -11,14 +11,15 @@
     </section>
     <section class="code-section parallax">
       <div class="card-container">
-        <article :class="showCarCode ? 'large-card card' : 'card'">
+        <article ref="carCode" :class="showCarCode ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/208.png"/> -->
             <img src="../assets/gpt/code-voiture.png"/>
+            <img src="../assets/back-button.png" @click="scrollTo('bikeCode')" class="scroll-arrow"/>
           </header>
           <footer>
             <h1 @click="showCarCode = !showCarCode">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showCarCode">
                 <div class="list">
                   <div class="elem"><span>Forfait Code Low Cost</span><span>149€</span></div>
@@ -28,14 +29,15 @@
             </Transition>
           </footer>
         </article>
-        <article :class="showBikeCode ? 'large-card card' : 'card'">
+        <article ref="bikeCode" :class="showBikeCode ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/208.png"/> -->
+            <img src="../assets/back-button.png" @click="scrollTo('carCode')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/code-moto.png"/>
           </header>
           <footer>
             <h1 @click="showBikeCode = !showBikeCode">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showBikeCode">
                 <div class="list">
                   <div class="elem"><span>Forfait Code Low Cost</span><span>149€</span></div>
@@ -50,15 +52,16 @@
       <h1 class="title">Permis de conduire</h1>
     </section>
     <section class="card-section parallax">
-      <div class="card-container">
-        <article :class="showCar ? 'large-card card' : 'card'">
+      <div class="card-container" ref="carMenu">
+        <article ref="carPermis" :class="showCar ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/208.png"/> -->
             <img src="../assets/gpt/208-gpt.png"/>
+            <img src="../assets/back-button.png" @click="scrollTo('bikePermis')" class="scroll-arrow"/>
           </header>
           <footer>
             <h1 @click="showCar = !showCar">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showCar">
                 <div class="list">
                   <div class="elem"><span>Forfait 10h</span><span>509€</span></div>
@@ -71,14 +74,16 @@
             </Transition>
           </footer>
         </article>
-        <article :class="showBike ? 'large-card card' : 'card'">
+        <article ref="bikePermis" :class="showBike ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/bmwrs5.png"/> -->
+            <img src="../assets/back-button.png" @click="scrollTo('carPermis')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/moto-bm-gpt-far.png"/>
+            <img src="../assets/back-button.png" @click="scrollTo('trailerPermis')" class="scroll-arrow"/>
           </header>
           <footer>
             <h1 @click="showBike = !showBike">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showBike">
                 <div class="list">
                   <div class="elem"><span>Forfait A1 (16 ans)</span><span>999€</span></div>
@@ -91,13 +96,15 @@
             </Transition>
           </footer>
         </article>
-        <article :class="showTrailer ? 'large-card card' : 'card'">
+        <article ref="trailerPermis" :class="showTrailer ? 'large-card card' : 'card'">
           <header>
+            <img src="../assets/back-button.png" @click="scrollTo('bikePermis')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/remorque-gpt.png"/>
+            <img src="../assets/back-button.png" @click="scrollTo('trottPermis')" class="scroll-arrow"/>
           </header>
           <footer>
             <h1 @click="showTrailer = !showTrailer">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showTrailer">
                 <div class="list">
                   <div class="elem"><span>Forfait A1 (16 ans)</span><span>999€</span></div>
@@ -110,13 +117,14 @@
             </Transition>
           </footer>
         </article>
-        <article :class="showScooter ? 'large-card card' : 'card'">
+        <article ref="trottPermis" :class="showScooter ? 'large-card card' : 'card'">
           <header>
+            <img src="../assets/back-button.png" @click="scrollTo('trailerPermis')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/trott-far-gpt.png"/>
           </header>
           <footer>
             <h1 @click="showScooter = !showScooter">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
-            <Transition>
+            <Transition name="fadeHeight">
               <aside v-if="showScooter">
                 <div class="list">
                   <div class="elem"><span>Formation Trottinette Electrique</span><span>49€</span></div>
@@ -195,13 +203,22 @@
     <section class="category legal-tenders">
       <div class="row">
         <div class="col">
+          <h6 class="title-xsm">Service Client</h6>
+          <p>Batch 1</p>
+          <p>Batch 1</p>
           <p>Batch 1</p>
         </div>
         <div class="col">
+          <h6 class="title-xsm">Service Client</h6>
+          <p>Batch 2</p>
+          <p>Batch 2</p>
           <p>Batch 2</p>
         </div>
         <div class="col">
-          <p>Batch 3</p>
+          <h6 class="title-xsm">Nos Services</h6>
+          <p>Code de la route</p>
+          <p>Permis de conduire</p>
+          <p>Rattrapage de points</p>
         </div>
       </div>
     </section>
@@ -262,11 +279,52 @@ export default {
       showCarCode: false,
       showBikeCode: false
     }
+  },
+  methods: {
+    scrollTo: function (elemToSee) {
+      const elem = this.$refs[elemToSee]
+      elem.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'center'
+      })
+    }
   }
 }
 </script>
 
 <style scoped>
+  .card header {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card footer {
+    width: 100%;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 1.5vw;
+  }
+  .scroll-arrow {
+    visibility: hidden;
+    position: absolute;
+    /* float: left; */
+    /* top: 0; */
+    max-width: 40px;
+    aspect-ratio: 1!important;
+    z-index: 999;
+    opacity: 0.7;
+  }
+  .scroll-arrow:not(.reverse) {
+    right: 5px;
+  }
+  .scroll-arrow.reverse {
+    left: 5px;
+    transform: rotate(180deg);
+  }
   p {
     font-size: 2rem;
   }
@@ -285,7 +343,7 @@ export default {
     justify-content: center;
     align-items: center;
     color: white;
-    background: url('../assets/tep devanture-car-darker-sketch.png');
+    background: url('../assets/Auto_ecole.jpg');
   }
   .main-section p {
     font-size: 2vw;
@@ -360,8 +418,16 @@ export default {
     font-size: 4vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  .col p {
+  .title-xsm {
+    width: 100%;
+    color: white;
+    text-shadow: 0 0 50px black;
     font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .col p {
+    font-size: 1vw;
+    margin-top: 0;
   }
   img {
     width: 100%;
@@ -386,7 +452,8 @@ export default {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
     min-height: 35vh;
     height: fit-content;
@@ -400,7 +467,7 @@ export default {
     background-color: rgb(42, 42, 42);
   }
   .large-card {
-    flex: 3 0 25%;
+    flex: 0 0 25%;
   }
   .card:not(.large-card) {
     flex: 0 3 25%;
@@ -421,16 +488,6 @@ export default {
   }
   .arrow {
     transition: 1s;
-  }
-  .card header {
-    width: 100%;
-    aspect-ratio: 16/9;
-  }
-  .card footer {
-    width: 100%;
-    color: white;
-    text-shadow: 0 0 5px black;
-    font-size: 1.5vw;
   }
   .card footer:hover {
     cursor: pointer;
@@ -478,9 +535,20 @@ export default {
     opacity: 0;
   }
 
+  .fadeHeight-enter-active,
+  .fadeHeight-leave-active {
+    transition: all 1s;
+    max-height: 500px;
+  }
+  .fadeHeight-enter-from,
+  .fadeHeight-leave-to
+  {
+    opacity: 0;
+    max-height: 0px;
+  }
+
   .row {
     display: flex;
-    flex: 0 0 50%;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
@@ -515,6 +583,9 @@ export default {
   }
 
   @media only screen and (max-device-width: 1366px) {
+    .scroll-arrow {
+      visibility: visible;
+    }
     .hour-list {
       width: 90%;
       font-size: 2vw;
@@ -568,6 +639,17 @@ export default {
     }
     .card footer {
       font-size: 1.5vh;
+    }
+    .col p {
+      font-size: 2vw;
+      margin-top: 0;
+    }
+    .title-xsm {
+      width: 100%;
+      color: white;
+      text-shadow: 0 0 50px black;
+      font-size: 4vw;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   }
 </style>
