@@ -63,13 +63,30 @@
             <h1 @click="showCar = !showCar">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
             <Transition name="fadeHeight">
               <aside v-if="showCar">
-                <div class="list">
-                  <div class="elem"><span>Forfait 10h</span><span>509€</span></div>
-                  <div class="elem"><span>Forfait 20h</span><span>999€</span></div>
-                  <div class="elem"><span>Forfait 20h Traditionnel</span><span>1099€</span></div>
-                  <div class="elem"><span>Forfait 20h Accéléré</span><span>1599€</span></div>
-                  <div class="elem"><span>Forfait AAC (Conduite Accompagnée)</span><span>1249€</span></div>
+                <div class="btn-flex-container">
+                  <button @click="showManCar = !showManCar" :class="showManCar ? 'active' : ''">
+                    <img src="../assets/gear-shift-man.png"/>
+                  </button>
+                  <button @click="showPRNDCar = !showPRNDCar" :class="showPRNDCar ? 'active' : ''">
+                    <img src="../assets/gear-shift.png"/>
+                  </button>
                 </div>
+                <Transition mode="out-in" name="slide-fade">
+                  <div v-if="showManCar" class="list">
+                    <div class="elem"><span>Forfait 10h</span><span>509€</span></div>
+                    <div class="elem"><span>Forfait 20h</span><span>999€</span></div>
+                    <div class="elem"><span>Forfait 20h Traditionnel</span><span>1099€</span></div>
+                    <div class="elem"><span>Forfait 20h Accéléré</span><span>1599€</span></div>
+                    <div class="elem"><span>Forfait AAC (Conduite Accompagnée)</span><span>1249€</span></div>
+                  </div>
+                  <div v-else-if="showPRNDCar" class="list">
+                    <div class="elem"><span>Forfait 10h</span><span>509€</span></div>
+                    <div class="elem"><span>Forfait 13h</span><span>660€</span></div>
+                    <div class="elem"><span>Forfait 13h Traditionnel</span><span>799€</span></div>
+                    <div class="elem"><span>Forfait 13h Accéléré</span><span>1299€</span></div>
+                    <div class="elem"><span>Forfait AAC (Conduite Accompagnée)</span><span>849€</span></div>
+                  </div>
+                </Transition>
               </aside>
             </Transition>
           </footer>
@@ -231,12 +248,24 @@
 export default {
   name: 'HomeView',
   watch: {
+    showManCar (newVal) {
+      if (newVal) {
+        this.showPRNDCar = false
+      }
+    },
+    showPRNDCar (newVal) {
+      if (newVal) {
+        this.showManCar = false
+      }
+    },
     showCar (newVal) {
       if(newVal) {
         this.showBike = false
         this.showTrailer = false
         this.showScooter = false
       }
+      this.showManCar = false
+      this.showPRNDCar = false
     },
     showBike (newVal) {
       if(newVal) {
@@ -277,7 +306,9 @@ export default {
       showTrailer: false,
       showScooter: false,
       showCarCode: false,
-      showBikeCode: false
+      showBikeCode: false,
+      showManCar: false,
+      showPRNDCar: false
     }
   },
   methods: {
@@ -294,6 +325,30 @@ export default {
 </script>
 
 <style scoped>
+  div.btn-flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  div.btn-flex-container button {
+    width: 40%;
+    background-color: transparent;
+    filter: invert(1);
+    border-radius: 8px;
+  }
+  div.btn-flex-container button:hover {
+    filter: invert(0.8);
+    cursor: pointer;
+  }
+  div.btn-flex-container button.active {
+    background-color: white;
+    filter: invert(0);
+  }
+  div.btn-flex-container button img {
+    object-fit: contain;
+  }
+
   .card header {
     width: 100%;
     aspect-ratio: 16/9;
@@ -349,7 +404,7 @@ export default {
     font-size: 2vw;
   }
   .code-section {
-    background: url('../assets/route-dessin.png');
+    background: url('../assets/route-code.png');
     padding: 32px;
     height: fit-content;
   }
@@ -545,6 +600,20 @@ export default {
   {
     opacity: 0;
     max-height: 0px;
+  }
+
+  .slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
   }
 
   .row {
