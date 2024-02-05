@@ -48,39 +48,39 @@ nav a.router-link-exact-active {
 
 .v-enter-active {
     transition: opacity 1s ease;
-  }
-  .v-leave-active {
-    transition: opacity 0.5s ease;
-  }
+}
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
 
-  .v-enter-from,
-  .v-leave-to {
-    opacity: 0;
-  }
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
-  .fadeHeight-enter-active,
-  .fadeHeight-leave-active {
-    transition: all 1s;
-    max-height: 500px;
-  }
-  .fadeHeight-enter-from,
-  .fadeHeight-leave-to
-  {
-    opacity: 0;
-    max-height: 0px;
-  }
+.fadeHeight-enter-active,
+.fadeHeight-leave-active {
+  transition: all 1s;
+  max-height: 500px;
+}
+.fadeHeight-enter-from,
+.fadeHeight-leave-to
+{
+  opacity: 0;
+  max-height: 0px;
+}
 
-  .slide-fade-enter-active {
-    transition: all 0.3s ease-out;
-  }
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
 
-  .slide-fade-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-  }
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
 
-  .slide-fade-enter-from,
-  .slide-fade-leave-to {
-    transform: translateX(20px);
-    opacity: 0;
-  }
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 </style>
