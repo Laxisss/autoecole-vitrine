@@ -75,14 +75,14 @@
                   <div v-if="showManCar" class="list">
                     <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509"/>
                     <TarifsDisplay class="elem" libelle="Forfait 20h" prix="999"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 20h Traditionnel" prix="799"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 20h Traditionnel" prix="1099"/>
                     <TarifsDisplay class="elem" libelle="Forfait 20h Accéléré" prix="1599"/>
                     <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="1249"/>
                   </div>
                   <div v-else-if="showPRNDCar" class="list">
                     <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509"/>
                     <TarifsDisplay class="elem" libelle="Forfait 13h" prix="660"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 13h Traditionnel" prix="799"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 13h Traditionnel" prix="749"/>
                     <TarifsDisplay class="elem" libelle="Forfait 13h Accéléré" prix="1299"/>
                     <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="849"/>
                   </div>
@@ -124,11 +124,12 @@
             <Transition name="fadeHeight">
               <aside v-if="showTrailer">
                 <div class="list">
-                  <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999"/>
+                  <h2>A venir...</h2>
+                  <!-- <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999"/>
                   <TarifsDisplay class="elem" libelle="Forfait A2 (18 ans)" prix="799"/>
                   <TarifsDisplay class="elem" libelle="Formation 125cm<sup>3</sup>" prix="279"/>
                   <TarifsDisplay class="elem" libelle="Permis AM (14 ans)" prix="349"/>
-                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279"/>
+                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279"/> -->
                 </div>
               </aside>
             </Transition>
