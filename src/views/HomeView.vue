@@ -177,7 +177,7 @@
               <span>Vendredi</span><span>09:30-13:00 | 14:30-19:00</span>
             </div>
             <div>
-              <span>Samedi</span><span>09:30-14:30</span>
+              <span>Samedi</span><span>09:30-13:00</span>
             </div>
             <div>
               <span>Dimanche</span><span>Fermé</span>
@@ -188,22 +188,22 @@
           <h1 class="title-sm">Horaires de conduite</h1>
           <div class="hour-list">
             <div class="hour-display">
-              <span>Lundi</span><span>09:30-13:00 | 14:30-19:00</span>
+              <span>Lundi</span><span>09:00-13:00 | 14:30-19:00</span>
             </div>
             <div>
-              <span>Mardi</span><span>09:30-13:00 | 14:30-19:00</span>
+              <span>Mardi</span><span>09:00-13:00 | 14:30-19:00</span>
             </div>
             <div>
-              <span>Mercredi</span><span>09:30-13:00 | 14:30-19:00</span>
+              <span>Mercredi</span><span>09:00-13:00 | 14:30-19:00</span>
             </div>
             <div>
               <span>Jeudi</span><span>Fermé</span>
             </div>
             <div>
-              <span>Vendredi</span><span>09:30-13:00 | 14:30-19:00</span>
+              <span>Vendredi</span><span>09:00-13:00 | 14:30-19:00</span>
             </div>
             <div>
-              <span>Samedi</span><span>09:30-19:00</span>
+              <span>Samedi</span><span>09:00-19:00</span>
             </div>
             <div>
               <span>Dimanche</span><span>Fermé</span>
@@ -225,7 +225,7 @@
           <img id="logo-notes" src="../assets/teppics/logo tout.png" alt="Logo Tout Est Permis"/>
           <span>
             <img id="google-notes" src="../assets/logo_google_5stars.png" alt="Google 5 étoiles"/>
-            5/5 100+ Avis&nbsp;&nbsp;
+            4.9/5 130+ Avis&nbsp;&nbsp;
             <a href="https://g.co/kgs/wdq3o6E" target="_blank">Voir Les Avis</a>
           </span>
         </div>
