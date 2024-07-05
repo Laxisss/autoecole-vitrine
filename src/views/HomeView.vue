@@ -14,7 +14,7 @@
         <article ref="carCode" :class="showCarCode ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/208.png"/> -->
-            <img src="../assets/gpt/gpt-code-real.png" alt="Illustration code de la route"/>
+            <img src="../assets/code-voiture.png" alt="Illustration code de la route"/>
             <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('bikeCode')" class="scroll-arrow"/>
           </header>
           <footer>
@@ -22,8 +22,8 @@
             <Transition name="fadeHeight">
               <aside v-if="showCarCode">
                 <div class="list">
-                  <TarifsDisplay class="elem" libelle="Forfait Code Low Cost" prix="149"/>
-                  <TarifsDisplay class="elem" libelle="Forfait Code Full" prix="299"/>
+                  <TarifsDisplay class="elem" libelle="Forfait Code Low Cost" prix="149" desc="Les cours de code de la route"/>
+                  <TarifsDisplay class="elem" libelle="Forfait Code Full" prix="299" desc="Votre code au complet ! Cours, Examen... Tout inclus !"/>
                 </div>
               </aside>
             </Transition>
@@ -33,14 +33,14 @@
           <header>
             <!-- <img src="../assets/208.png"/> -->
             <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('carCode')" class="scroll-arrow reverse"/>
-            <img src="../assets/gpt/gpt-code-moto-real.png" alt="Illustration code de la route Moto"/>
+            <img src="../assets/code-moto.png" alt="Illustration code de la route Moto"/>
           </header>
           <footer>
             <h1 @click="showBikeCode = !showBikeCode">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
             <Transition name="fadeHeight">
               <aside v-if="showBikeCode">
                 <div class="list">
-                  <TarifsDisplay class="elem" libelle="Forfait Code Low Cost" prix="149"/>
+                  <TarifsDisplay class="elem" libelle="Forfait Code Low Cost" prix="149" desc="Les cours de code de la route"/>
                 </div>
               </aside>
             </Transition>
@@ -56,7 +56,7 @@
         <article ref="carPermis" :class="showCar ? 'large-card card' : 'card'">
           <header>
             <!-- <img src="../assets/208.png"/> -->
-            <img src="../assets/gpt/208-gpt.png" alt="Image de Peugeot 208"/>
+            <img src="../assets/peugeot_208_60.png" alt="Image de Peugeot 208"/>
             <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('bikePermis')" class="scroll-arrow"/>
           </header>
           <footer>
@@ -73,18 +73,18 @@
                 </div>
                 <Transition mode="out-in" name="slide-fade">
                   <div v-if="showManCar" class="list">
-                    <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 20h" prix="999"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 20h Traditionnel" prix="1099"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 20h Accéléré" prix="1599"/>
-                    <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="1249"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509" desc="Un pack de 10h de conduite"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 20h" prix="999" desc="Un pack de 20h de conduite"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 20h Traditionnel" prix="1099" desc="Votre Permis au complet ! Leçons, Frais d'examens... Tout inclus !"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 20h Accéléré" prix="1599" desc="Votre Permis au complet ! Et en une semaine !"/>
+                    <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="1249" desc="Disponible dès 15 ans"/>
                   </div>
                   <div v-else-if="showPRNDCar" class="list">
-                    <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 13h" prix="660"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 13h Traditionnel" prix="749"/>
-                    <TarifsDisplay class="elem" libelle="Forfait 13h Accéléré" prix="1299"/>
-                    <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="849"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 10h" prix="509" desc="Un pack de 10h de conduite"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 13h" prix="660" desc="Un pack de 13h de conduite"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 13h Traditionnel" prix="749" desc="Votre Permis Boite Auto au complet ! Leçons, Frais d'examens... Tout inclus !"/>
+                    <TarifsDisplay class="elem" libelle="Forfait 13h Accéléré" prix="1299" desc="Votre Permis Boite Auto au complet ! Et en une semaine !"/>
+                    <TarifsDisplay class="elem" libelle="Forfait AAC (Conduite Accompagnée)" prix="849" desc="Disponible dès 15 ans"/>
                   </div>
                 </Transition>
               </aside>
@@ -95,25 +95,25 @@
           <header>
             <!-- <img src="../assets/bmwrs5.png"/> -->
             <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('carPermis')" class="scroll-arrow reverse"/>
-            <img src="../assets/gpt/moto-bm-gpt-far.png" alt="Image d'une moto BMW"/>
-            <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('trailerPermis')" class="scroll-arrow"/>
+            <img src="../assets/moto.png" alt="Image d'une moto BMW"/>
+            <!-- <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('trottPermis')" class="scroll-arrow"/> -->
           </header>
           <footer>
             <h1 @click="showBike = !showBike">Découvrir nos offres &nbsp;<span class="arrow">&#10095;</span></h1>
             <Transition name="fadeHeight">
               <aside v-if="showBike">
                 <div class="list">
-                  <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999"/>
-                  <TarifsDisplay class="elem" libelle="Forfait A2 (18 ans)" prix="799"/>
-                  <TarifsDisplay class="elem" libelle="Formation 125cm<sup>3</sup>" prix="279"/>
-                  <TarifsDisplay class="elem" libelle="Permis AM (14 ans)" prix="349"/>
-                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279"/>
+                  <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999" desc="Votre permis Catégorie A1. Disponible dès 16 ans"/>
+                  <TarifsDisplay class="elem" libelle="Forfait A2 (18 ans)" prix="799" desc="Votre permis Catégorie A2. Disponible dès 18 ans"/>
+                  <TarifsDisplay class="elem" libelle="Formation 125cm<sup>3</sup>" prix="279" desc="Votre permis pour 125cm<sup>3</sup>"/>
+                  <TarifsDisplay class="elem" libelle="Permis AM (14 ans)" prix="349" desc="Votre permis Catégorie AM. Disponible dès 14 ans"/>
+                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279" desc="Votre permis Catégorie A Depuis un permis A2"/>
                 </div>
               </aside>
             </Transition>
           </footer>
         </article>
-        <article ref="trailerPermis" :class="showTrailer ? 'large-card card' : 'card'">
+        <!-- <article ref="trailerPermis" :class="showTrailer ? 'large-card card' : 'card'">
           <header>
             <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('bikePermis')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/remorque-gpt.png" alt="Image d'une remorque"/>
@@ -124,20 +124,19 @@
             <Transition name="fadeHeight">
               <aside v-if="showTrailer">
                 <div class="list">
-                  <h2>A venir...</h2>
-                  <!-- <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999"/>
+                  <TarifsDisplay class="elem" libelle="Forfait A1 (16 ans)" prix="999"/>
                   <TarifsDisplay class="elem" libelle="Forfait A2 (18 ans)" prix="799"/>
                   <TarifsDisplay class="elem" libelle="Formation 125cm<sup>3</sup>" prix="279"/>
                   <TarifsDisplay class="elem" libelle="Permis AM (14 ans)" prix="349"/>
-                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279"/> -->
+                  <TarifsDisplay class="elem" libelle="Passerelle A2 vers A" prix="279"/>
                 </div>
               </aside>
             </Transition>
           </footer>
-        </article>
-        <article ref="trottPermis" :class="showScooter ? 'large-card card' : 'card'">
+        </article> -->
+        <!-- <article ref="trottPermis" :class="showScooter ? 'large-card card' : 'card'">
           <header>
-            <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('trailerPermis')" class="scroll-arrow reverse"/>
+            <img src="../assets/back-button.png" alt="Fleche de scroll" @click="scrollTo('bikePermis')" class="scroll-arrow reverse"/>
             <img src="../assets/gpt/trott-far-gpt.png" alt="Image d'une trottinette électrique"/>
           </header>
           <footer>
@@ -150,7 +149,7 @@
               </aside>
             </Transition>
           </footer>
-        </article>
+        </article> -->
       </div>
     </section>
     <section class="category">
@@ -231,12 +230,12 @@
         </div>
       </div>
       <div class="row shadow-text">
-        <div class="col">
+        <!-- <div class="col">
           <h1 class="title-xsm">Mentions Légales</h1>
           <p class="hoverable" title="82942783000015">SIRET</p>
           <p>TBD 1</p>
           <p>TBD 1</p>
-        </div>
+        </div> -->
         <div class="col">
           <h1 class="title-xsm">Nous Contacter</h1>
           <p class="hoverable" title="tp.13004@gmail.com">Email: <a class="no-style-link" href="mailto:tp.13004@gmail.com">tp.13004@gmail.com</a></p>
@@ -247,7 +246,7 @@
           <h1 class="title-xsm">Nos Services</h1>
           <p class="hoverable" @click="scrollTo('code-section')">Code de la route</p>
           <p class="hoverable" @click="scrollTo('permis-section')">Permis de conduire</p>
-          <p>Rattrapage de points</p>
+          <!-- <p>Rattrapage de points</p> -->
         </div>
       </div>
     </section>
@@ -431,7 +430,7 @@ export default {
   }
   .code-section {
     /* background: url('../assets/route-code.png'); */
-    background: url('../assets/teppics/sale_code_cours.png');
+    background: url('../assets/sale-exam.png');
     padding: 32px;
     height: fit-content;
   }
@@ -442,13 +441,13 @@ export default {
   }
   .hours-section {
     /* background: url('../assets/timing.png'); */
-    background: url('../assets/teppics/bureau.png');
+    background: url('../assets/bureau.png');
     padding: 32px;
     height: fit-content;
   }
   .location-section {
     /* background: url('../assets/cartoonMap2.png'); */
-    background: url('../assets/gpt/carte-gpt.png');
+    background: url('../assets/plan_marseille.png');
     padding: 32px;
     height: fit-content;
   }
