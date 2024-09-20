@@ -5,8 +5,24 @@
       <router-link to="/about">About</router-link>
     </nav>
   </header> -->
-  <router-view/>
+  <router-view v-if="production"/>
+  <Construction v-else/>
 </template>
+
+<script>
+import Construction from './components/Construction.vue'
+export default {
+  name: 'AppView',
+  components: {
+    Construction
+  },
+  data () {
+    return {
+      production: false
+    }
+  }
+}
+</script>
 
 <style>
 * {
