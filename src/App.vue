@@ -6,7 +6,7 @@
     </nav>
   </header> -->
   <router-view v-if="production"/>
-  <Construction v-else/>
+  <Construction v-else @clicked="count++"/>
 </template>
 
 <script>
@@ -16,9 +16,17 @@ export default {
   components: {
     Construction
   },
+  watch: {
+    count (newVal) {
+      if(newVal >= 5) {
+        this.production = true
+      }
+    }
+  },
   data () {
     return {
-      production: false
+      production: false,
+      count: 0
     }
   }
 }

@@ -3,7 +3,7 @@
     <div id="construction">
       <img src="../assets/travaux-en-cours.png" />
       <h1>Ce site est en cours de construction</h1>
-      <img src="../assets/travaux-en-cours.png" />
+      <img src="../assets/travaux-en-cours.png" @click="$emit('clicked')" />
     </div>
   </main>
 </template>
